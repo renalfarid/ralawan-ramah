@@ -6,7 +6,7 @@ module.exports = {
     './assets/js/*.min.js'
   ],
   safelist: [
-    'bg-orange-600'
+    'bg-blue-600'
   ],
   theme: {
     extend: {},
