@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3100'
+const apiUrl = 'https://formlv3.sinjairamah.com/api'
 let dataRelawan = {}
 let formDataRelawan = {}
 let updatePemilih = null
