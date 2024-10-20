@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3110'
+const apiUrl = 'http://localhost:3100'
 let dataRelawan = {}
 let formDataRelawan = {}
 let updatePemilih = null
