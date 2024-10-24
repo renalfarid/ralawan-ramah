@@ -127,12 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    kelurahanSelect.addEventListener('change', function() {
+      const kelurahanId = this.value
+      idKelurahan = kelurahanId
+      korcamSelect.value = '';  // Mengembalikan korcam ke default
+      korluSelect.disabled = true;  // Disable korluSelect until korcam is selected again
+      korluSelect.innerHTML = '<option value="">Pilih Korlu</option>';
+    })
+
 
      // Event Listener for Kecamatan Select
      korcamSelect.addEventListener('change', function() {
         const korcamId = this.value;
         if (korcamId) {
-            fetch(`${apiUrl}/korlu?korcam=${korcamId}`)
+            fetch(`${apiUrl}/korlu?korcam=${korcamId}&fkKelurahan=${idKelurahan}`)
                 .then(response => response.json())
                 .then(data => {
                     populateKorlu(korluSelect, data.data, "Pilih Korlu");
